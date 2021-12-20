@@ -1,0 +1,42 @@
+export const SPIRITUAL = [
+  {
+    name: "World Religions",
+    outcomes: ["You will be able to identify 12 of the major world religions"],
+    book: "The 12 major world religions",
+    project: "",
+    Mentor: "Cody Lillywhite",
+    Weeks: [],
+  },
+  {
+    name: "Christian history",
+    outcomes: ["You will be able to identify 12 of the major world religions"],
+    book: "The 12 major world religions",
+    project: "",
+    Mentor: "Cody Lillywhite",
+    Weeks: [],
+  },
+  {
+    name: "The Holy Ghost",
+    outcomes: ["You will be able to identify 12 of the major world religions"],
+    book: "The 12 major world religions",
+    project: "",
+    Mentor: "Cody Lillywhite",
+    Weeks: [],
+  },
+  {
+    name: "The Restoration",
+    outcomes: ["You will be able to identify 12 of the major world religions"],
+    book: "The 12 major world religions",
+    project: "",
+    Mentor: "Cody Lillywhite",
+    Weeks: [],
+  },
+  {
+    name: "Study and Learn skills",
+    outcomes: ["You will be able to identify 12 of the major world religions"],
+    book: "The 12 major world religions",
+    project: "",
+    Mentor: "Cody Lillywhite",
+    Weeks: [],
+  },
+];
