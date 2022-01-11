@@ -13,7 +13,7 @@ export default class SocialCoursesComponent extends Component {
       return (
         <ListItem
           title={item.name}
-          onPress={() => navigate("topic", { item: item })}
+          onPress={() => navigate("Topic", { item: item })}
         />
       );
     };

@@ -28,9 +28,6 @@ export const PHYSICAL = [
     name: "Hygiene",
   },
   {
-    name: "Finance",
-  },
-  {
     name: "FoodPrep",
   },
   {

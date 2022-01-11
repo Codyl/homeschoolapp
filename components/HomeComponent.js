@@ -12,8 +12,8 @@ export default class HomeComponent extends Component {
 
     return (
       <View>
-        <Text style={styles.h1}>Homeschool</Text>
-        <Text>Please add one course to each of the following categories.</Text>
+        <Text style={styles.h1}>Home page</Text>
+        {/* <Text>Please add one course to each of the following categories.</Text>
         <Text>Please select a category</Text>
         <ListItem
           onPress={() => navigate("Physical")}
@@ -30,7 +30,7 @@ export default class HomeComponent extends Component {
           <Text>My Spiritual course:</Text>
           <Text>My Mental course:</Text>
           <Text>My Social course:</Text>
-        </View>
+        </View> */}
       </View>
     );
   }

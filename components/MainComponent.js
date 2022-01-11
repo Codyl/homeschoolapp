@@ -1,53 +1,66 @@
 import React, { Component } from "react";
-import { Text, ScrollView, View, Platform } from "react-native";
+import { Text, ScrollView, View, Platform, StyleSheet } from "react-native";
 import Constants from "expo-constants";
 import { createStackNavigator } from "react-navigation-stack";
 import { createDrawerNavigator } from "react-navigation-drawer";
 import { createAppContainer } from "react-navigation";
+import { Icon } from "react-native-elements";
+
 import HomeComponent from "./HomeComponent";
-import PhysicalCoursesComponent from "./PhysicalCoursesComponent";
-import MentalCoursesComponent from "./MentalCoursesComponent";
-import SocialCoursesComponent from "./SocialCoursesComponent";
-import SpiritualCoursesComponent from "./SpiritualCoursesComponent";
-import TopicComponent from "./TopicComponent";
-import { createBottomTabNavigator } from "react-navigation-tabs";
+import Courses from "./CoursesComponent";
+import defaultNavigationOptions from "./NavigationOptions";
 const HomeNavigator = createStackNavigator(
   {
     Home: { screen: HomeComponent },
-    Physical: { screen: PhysicalCoursesComponent },
-    Social: { screen: SocialCoursesComponent },
-    Mental: { screen: MentalCoursesComponent },
-    Spiritual: { screen: SpiritualCoursesComponent },
-    topic: { screen: TopicComponent },
   },
+  defaultNavigationOptions
+);
+const CoursesNavigator = createStackNavigator(
   {
-    defaultNavigationOptions: {
-      headerStyle: {
-        backgroundColor: "#5637DD",
-      },
-      headerTintColor: "#fff",
-      headerTitleStyle: {
-        color: "#fff",
-      },
-    },
-  }
+    Home: { screen: Courses },
+  },
+  defaultNavigationOptions
+);
+const UpcomingQuestsNavigator = createStackNavigator(
+  {
+    Home: { screen: HomeComponent },
+  },
+  defaultNavigationOptions
+);
+const AchievementsNavigator = createStackNavigator(
+  {
+    Home: { screen: HomeComponent },
+  },
+  defaultNavigationOptions
+);
+const AboutNavigator = createStackNavigator(
+  {
+    Home: { screen: HomeComponent },
+  },
+  defaultNavigationOptions
 );
 
-const MainNavigator = createDrawerNavigator(
+const SideNavigator = createDrawerNavigator(
   {
-    Home: { screen: HomeNavigator },
+    Home: {
+      screen: HomeNavigator,
+      navigationOptions: {
+        drawerIcon: ({ tintColor }) => (
+          <Icon name="home" type="font-awesome" size={24} color={tintColor} />
+        ),
+      },
+    },
+    Courses: { screen: Courses },
+    UpcomingQuests: { screen: UpcomingQuestsNavigator },
+    Achievements: { screen: AchievementsNavigator },
+    About: { screen: AboutNavigator },
   },
   {
     drawerBackgroundColor: "#CEC8FF",
   }
 );
 
-const Tab = createBottomTabNavigator({
-  Home: { screen: HomeComponent },
-  Main: { screen: MainNavigator },
-});
-
-const AppNavigator = createAppContainer(Tab);
+const AppNavigator = createAppContainer(SideNavigator);
 
 export default class Main extends Component {
   render() {
