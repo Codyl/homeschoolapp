@@ -14,14 +14,12 @@ export default class TopicComponent extends Component {
         <Text> {item.book} </Text>
         <Text> {item.mentor} </Text>
         <Text> {item.project} </Text>
-        <Button title="Add course" />
-        {/* <FlatList
+        <FlatList
           data={item.outcomes}
-          renderItem={(outcome) => {
-            <Text>test</Text>;
-          }}
+          renderItem={({ outcome }) => <Text>{item.outcomes[0]}</Text>}
           keyExtractor={(item) => item.toString()}
-        /> */}
+        />
+        <Button title="Add course" />
       </View>
     );
   }

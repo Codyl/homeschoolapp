@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text, ScrollView, View, Platform, StyleSheet } from "react-native";
+import { View, Platform } from "react-native";
 import Constants from "expo-constants";
 import { createStackNavigator } from "react-navigation-stack";
 import { createDrawerNavigator } from "react-navigation-drawer";
@@ -9,6 +9,8 @@ import { Icon } from "react-native-elements";
 import HomeComponent from "./HomeComponent";
 import Courses from "./CoursesComponent";
 import defaultNavigationOptions from "./NavigationOptions";
+import UpcomingQuestsComponent from "./UpcomingQuestsComponent";
+import AchievementsComponent from "./AchievementsComponent";
 const HomeNavigator = createStackNavigator(
   {
     Home: { screen: HomeComponent },
@@ -17,25 +19,19 @@ const HomeNavigator = createStackNavigator(
 );
 const CoursesNavigator = createStackNavigator(
   {
-    Home: { screen: Courses },
+    Courses: { screen: Courses },
   },
   defaultNavigationOptions
 );
 const UpcomingQuestsNavigator = createStackNavigator(
   {
-    Home: { screen: HomeComponent },
+    Quests: { screen: UpcomingQuestsComponent },
   },
   defaultNavigationOptions
 );
 const AchievementsNavigator = createStackNavigator(
   {
-    Home: { screen: HomeComponent },
-  },
-  defaultNavigationOptions
-);
-const AboutNavigator = createStackNavigator(
-  {
-    Home: { screen: HomeComponent },
+    Achievements: { screen: AchievementsComponent },
   },
   defaultNavigationOptions
 );
@@ -53,7 +49,6 @@ const SideNavigator = createDrawerNavigator(
     Courses: { screen: Courses },
     UpcomingQuests: { screen: UpcomingQuestsNavigator },
     Achievements: { screen: AchievementsNavigator },
-    About: { screen: AboutNavigator },
   },
   {
     drawerBackgroundColor: "#CEC8FF",

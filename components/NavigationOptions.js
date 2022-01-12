@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Icon } from "react-native-elements";
+import { StyleSheet } from "react-native";
 
 export default defaultNavigationOptions = {
   defaultNavigationOptions: ({ navigation }) => ({
