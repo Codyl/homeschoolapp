@@ -42,13 +42,49 @@ const SideNavigator = createDrawerNavigator(
       screen: HomeNavigator,
       navigationOptions: {
         drawerIcon: ({ tintColor }) => (
-          <Icon name="home" type="font-awesome" size={24} color={tintColor} />
+          <Icon name="home" type="font-awesome-5" size={24} color={tintColor} />
         ),
       },
     },
-    Courses: { screen: Courses },
-    UpcomingQuests: { screen: UpcomingQuestsNavigator },
-    Achievements: { screen: AchievementsNavigator },
+    Achievements: {
+      screen: AchievementsNavigator,
+      navigationOptions: {
+        drawerIcon: ({ tintColor }) => (
+          <Icon
+            name="trophy"
+            type="font-awesome-5"
+            size={24}
+            color={tintColor}
+          />
+        ),
+      },
+    },
+    Courses: {
+      screen: Courses,
+      navigationOptions: {
+        drawerIcon: ({ tintColor }) => (
+          <Icon
+            name="dragon"
+            type="font-awesome-5"
+            size={24}
+            color={tintColor}
+          />
+        ),
+      },
+    },
+    UpcomingQuests: {
+      screen: UpcomingQuestsNavigator,
+      navigationOptions: {
+        drawerIcon: ({ tintColor }) => (
+          <Icon
+            name="clipboard-list"
+            type="font-awesome-5"
+            size={24}
+            color={tintColor}
+          />
+        ),
+      },
+    },
   },
   {
     drawerBackgroundColor: "#CEC8FF",
